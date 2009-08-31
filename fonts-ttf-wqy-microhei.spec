@@ -1,12 +1,14 @@
 Summary:	WenQuanYi MicroHei TrueType fonts
 Name:		fonts-ttf-wqy-microhei
 Version:	0.2.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	ASL 2.0 or GPLv3
 URL:		http://wenq.org/
 Group:		System/Fonts/True type
 Source0:	http://freefr.dl.sourceforge.net/sourceforge/wqy/wqy-microhei-%{version}-beta.tar.gz
 BuildArch:	noarch
+Requires(post):	fontconfig
+Requires(postun): fontconfig
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -41,6 +43,14 @@ ln -s ../../..%_datadir/fonts/TTF/wqy-microhei \
 
 %clean
 rm -fr %buildroot
+
+%post
+fc-cache
+
+%postun
+if [ "$1" = "0" ]; then
+fc-cache
+fi
 
 %files
 %defattr(-,root,root,0755)
