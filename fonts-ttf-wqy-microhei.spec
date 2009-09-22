@@ -1,7 +1,7 @@
 Summary:	WenQuanYi MicroHei TrueType fonts
 Name:		fonts-ttf-wqy-microhei
 Version:	0.2.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	ASL 2.0 or GPLv3
 URL:		http://wenq.org/
 Group:		System/Fonts/True type
@@ -26,6 +26,14 @@ As a result, it can be used for hand-held devices or embedded systems, or
 used on PC with a significantly small memory footprint. Because both
 font faces carry hinting and kerning instructions for Latin glyphs,
 they are the excellent choices for desktop fonts.
+
+%package -n fonts-ttf-default-zh_CN
+Summary: Virtual package providing default zh_CN fonts
+Group: System/Fonts/True type
+Requires: %{name} = %{version}
+
+%description -n fonts-ttf-default-zh_CN
+This package provides default TrueType font for zh_CN locale.
 
 %prep
 %setup -q -n wqy-microhei
@@ -58,3 +66,6 @@ fi
 %dir %_datadir/fonts/TTF/wqy-microhei/
 %_datadir/fonts/TTF/wqy-microhei/*.ttc
 %_sysconfdir/X11/fontpath.d/ttf-wqy-microhei:pri=50
+
+%files -n fonts-ttf-default-zh_CN
+%defattr(-,root,root,0755)
