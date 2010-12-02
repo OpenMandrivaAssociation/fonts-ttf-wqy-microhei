@@ -1,7 +1,7 @@
 Summary:	WenQuanYi MicroHei TrueType fonts
 Name:		fonts-ttf-wqy-microhei
 Version:	0.2.0
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	ASL 2.0 or GPLv3
 URL:		http://wenq.org/
 Group:		System/Fonts/True type
