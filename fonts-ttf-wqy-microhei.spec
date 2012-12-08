@@ -1,7 +1,7 @@
 Summary:	WenQuanYi MicroHei TrueType fonts
 Name:		fonts-ttf-wqy-microhei
 Version:	0.2.0
-Release:	%mkrel 8
+Release:	%mkrel 10
 License:	ASL 2.0 or GPLv3
 URL:		http://wenq.org/
 Group:		System/Fonts/True type
@@ -60,3 +60,39 @@ rm -fr %buildroot
 
 %files -n fonts-ttf-default-zh_CN
 %defattr(-,root,root,0755)
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 0.2.0-8mdv2011.0
++ Revision: 675158
+- rebuild
+
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 0.2.0-7
++ Revision: 675153
+- rebuild for new fontconfig
+
+* Tue May 03 2011 Oden Eriksson <oeriksson@mandriva.com> 0.2.0-6
++ Revision: 664340
+- mass rebuild
+
+* Thu Dec 02 2010 Oden Eriksson <oeriksson@mandriva.com> 0.2.0-5mdv2011.0
++ Revision: 605206
+- rebuild
+
+* Wed Jan 20 2010 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 0.2.0-4mdv2010.1
++ Revision: 494164
+- fc-cache is now called by an rpm filetrigger
+
+* Tue Sep 22 2009 Funda Wang <fwang@mandriva.org> 0.2.0-3mdv2010.0
++ Revision: 447117
+- adopting font selection of zh_CN locale
+
+* Mon Aug 31 2009 Funda Wang <fwang@mandriva.org> 0.2.0-2mdv2010.0
++ Revision: 422924
+- run fc-cache at post section
+
+* Thu Jun 18 2009 Funda Wang <fwang@mandriva.org> 0.2.0-1mdv2010.0
++ Revision: 386937
+- import fonts-ttf-wqy-microhei
+
+
