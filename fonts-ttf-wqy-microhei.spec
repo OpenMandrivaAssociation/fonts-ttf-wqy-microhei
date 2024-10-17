@@ -4,7 +4,7 @@ Version:	0.2.0
 Release:	21
 License:	ASL 2.0 or GPLv3
 Group:		System/Fonts/True type
-Url:		http://wenq.org/
+Url:		https://wenq.org/
 Source0:	http://freefr.dl.sourceforge.net/sourceforge/wqy/wqy-microhei-%{version}-beta.tar.gz
 BuildArch:	noarch
 BuildRequires:	fontconfig
